@@ -225,6 +225,37 @@
 				<property name="slogan" value="¡¡Que no lo he enchufado!!"/>
 				<property name="jingle" value="FIUUN"/>
 				<property name="targetUrl" value="http://airplaneES.com"/>	
-		</bean> 
+		</bean>
+		
+	<!-- Worker -->
+	<bean name="workerUserAccount01" class="acme.framework.entities.UserAccount">
+		<property name="username" value="worker" />
+		<property name="password" value="worker" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Worker" />
+				<property name="surname" value="Great" />
+				<property name="email" value="worker@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="workerWorker" />
+				<ref bean="workerAuthenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="workerWorker" class="acme.entities.roles.Worker">
+		<property name="userAccount" ref="workerUserAccount01" />
+		<property name="skillRecords" value="My Skills"/>
+		<property name="qualificationRecords" value="My qualifications"/>
+	</bean>
+	
+	<bean name="workerAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="workerUserAccount01" />
+	</bean>
+	 
 </beans>
 

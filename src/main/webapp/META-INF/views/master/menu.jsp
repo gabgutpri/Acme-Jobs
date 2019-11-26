@@ -76,8 +76,16 @@
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.offer.create" action="/consumer/offer/create"/>
 		</acme:menu-option>
-	</acme:menu-left>
+	
+	
+		<%-- COSAS DE WORKER --%>
 		
+		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">
+			
+		</acme:menu-option>
+		
+		
+	</acme:menu-left>
 		<%-- AQUI COMIENZA LA PARTE DERECHA DEL MENU (DONDE ESTA EL LOGIN Y DEMAS) --%>
 		
 	<acme:menu-right>
