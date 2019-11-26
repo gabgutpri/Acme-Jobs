@@ -225,6 +225,38 @@
 				<property name="slogan" value="¡¡Que no lo he enchufado!!"/>
 				<property name="jingle" value="FIUUN"/>
 				<property name="targetUrl" value="http://airplaneES.com"/>	
+		</bean>
+		
+  	<!-- Worker -->
+  	<bean name="workerUserAccount01" class="acme.framework.entities.UserAccount">
+	  	<property name="username" value="worker" />
+	  	<property name="password" value="worker" />
+	  	<property name="enabled" value="true" />
+  		<property name="identity">
+		  	<bean class="acme.datatypes.UserIdentity">
+		  		<property name="name" value="Worker" />
+		  		<property name="surname" value="Great" />
+		  		<property name="email" value="worker@acme.com" />
+		  	</bean>
+	  	</property>
+	  	<property name="roles">
+		  	<list>
+		  		<ref bean="workerWorker" />
+		  		<ref bean="workerAuthenticated" />
+		  	</list>
+		  </property>
+	  </bean>
+
+	  <bean name="workerWorker" class="acme.entities.roles.Worker">
+  		<property name="userAccount" ref="workerUserAccount01" />
+		  <property name="skillRecords" value="My Skills"/>
+		  <property name="qualificationRecords" value="My qualifications"/>
+	  </bean>
+	  
+  	<bean name="workerAuthenticated" class="acme.framework.entities.Authenticated">
+	  	<property name="userAccount" ref="workerUserAccount01" />
+  	</bean>
+	 
 		</bean> 
   
 		<!-- DUTY -->
@@ -275,25 +307,26 @@
 		
 		<!-- JOBS -->
 		<bean name="job1" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMP1-JOB1"/>
-		<property name="title" value="Title 1"/>
-		<property name="deadline" value="2030/12/11 23:50"/>
-		<property name="salary" value="12,000.99€"/>
-		<property name="description" value="Description of job 1"/>
-		<property name="moreInfo" value="http://www.contigoPipo"/>
-		<property name="finalMode" value="true"/>
-		<property name="employer" ref="employer1Employer"/>
+	  	<property name="reference" value="EMP1-JOB1"/>
+	  	<property name="title" value="Title 1"/>
+	  	<property name="deadline" value="2030/12/11 23:50"/>
+		  <property name="salary" value="12,000.99€"/>
+	  	<property name="description" value="Description of job 1"/>
+  		<property name="moreInfo" value="http://www.contigoPipo"/>
+	  	<property name="finalMode" value="true"/>
+		  <property name="employer" ref="employer1Employer"/>
 		</bean>
 		
 		<bean name="job2" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMP1-JOB2"/>
-		<property name="title" value="Title 2"/>
-		<property name="deadline" value="2030/12/11 23:50"/>
-		<property name="salary" value="30,000.99€"/>
-		<property name="description" value="Description of job 2"/>
-		<property name="moreInfo" value="http://www.contigoPipo"/>
-		<property name="finalMode" value="true"/>
-		<property name="employer" ref="employer1Employer"/>
+	  	<property name="reference" value="EMP1-JOB2"/>
+	  	<property name="title" value="Title 2"/>
+	  	<property name="deadline" value="2030/12/11 23:50"/>
+	  	<property name="salary" value="30,000.99€"/>
+  		<property name="description" value="Description of job 2"/>
+	  	<property name="moreInfo" value="http://www.contigoPipo"/>
+	  	<property name="finalMode" value="true"/>
+  		<property name="employer" ref="employer1Employer"/>
 		</bean>		
+
 </beans>
 
