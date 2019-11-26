@@ -47,6 +47,8 @@
 
     drop table if exists `customization_parameter`;
 
+    drop table if exists `duty`;
+
     drop table if exists `employer`;
 
     drop table if exists `investor_record`;

@@ -519,6 +519,22 @@ Employer
   <element>
     <id>UMLClass</id>
     <coordinates>
+      <x>791</x>
+      <y>497</y>
+      <w>245</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Duty
+--
++ title: String{NotBlank}
++ description: String{NotBlank}
++ percentage: double{Range(min=0,max=100)}</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
       <x>486</x>
       <y>408</y>
       <w>198</w>

@@ -97,6 +97,15 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `duty` (
+       `id` integer not null,
+        `version` integer not null,
+        `description` varchar(255),
+        `percentage` double precision not null,
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `employer` (
        `id` integer not null,
         `version` integer not null,
@@ -199,6 +208,7 @@
 create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
 create index IDXrodri2m1upnn62iu65kfktvny on `company_record` (`number_stars`);
 create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
+
 
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
