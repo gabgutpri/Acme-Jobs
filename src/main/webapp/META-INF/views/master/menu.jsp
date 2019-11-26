@@ -39,7 +39,7 @@
 			<acme:menu-suboption code="master.menu.authenticated.offer.list" action="/authenticated/offer/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.request.list" action="/authenticated/request/list"/>
 		</acme:menu-option>
-		
+	
 		<%-- COSAS DE ADMIN --%>
 		
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -77,13 +77,24 @@
 			<acme:menu-suboption code="master.menu.consumer.offer.create" action="/consumer/offer/create"/>
 		</acme:menu-option>
 	
-	
 		<%-- COSAS DE WORKER --%>
 		
 		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">
 			
 		</acme:menu-option>
 		
+	  <%-- COSAS DE EMPLOYER --%>
+
+		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">
+			<acme:menu-suboption code="master.menu.employer.duty.create" action="/employer/duty/create"/>
+		</acme:menu-option>
+  
+		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')" >
+			<acme:menu-suboption code="master.menu.employer.job.list" action="/employer/job/list-mine"/>
+		</acme:menu-option>	
+		
+
+	</acme:menu-left>
 		
 	</acme:menu-left>
 		<%-- AQUI COMIENZA LA PARTE DERECHA DEL MENU (DONDE ESTA EL LOGIN Y DEMAS) --%>

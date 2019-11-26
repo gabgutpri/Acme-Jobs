@@ -81,6 +81,12 @@ master.menu.consumer.offer.create= Crear oferta
 
 master.menu.worker = Worker
 
+# master.menu.employer ########################################################
+
+master.menu.employer = Empleador
+master.menu.employer.duty.create = Crear deberes
+master.menu.employer.job.list= Lista de trabajos
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
