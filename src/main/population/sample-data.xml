@@ -226,5 +226,20 @@
 				<property name="jingle" value="FIUUN"/>
 				<property name="targetUrl" value="http://airplaneES.com"/>	
 		</bean> 
+			<!-- DUTY -->
+			<bean id="duty01" class="acme.entities.dutys.Duty">
+				<property name="title" value="Title1"/>
+				<property name="description" value="Description1"/>
+				<property name="percentage" value="12.2"/>
+					
+		</bean> 
+		
+		<bean id="duty02" class="acme.entities.dutys.Duty">
+				<property name="title" value="Title2"/>
+				<property name="description" value="Description2"/>
+				<property name="percentage" value="100"/>
+	
+				
+		</bean> 
 </beans>
 

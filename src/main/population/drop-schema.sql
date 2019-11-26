@@ -39,6 +39,8 @@
 
     drop table if exists `customization_parameter`;
 
+    drop table if exists `duty`;
+
     drop table if exists `investor_record`;
 
     drop table if exists `non_commercial_banner`;
@@ -47,7 +49,7 @@
 
     drop table if exists `provider`;
 
-    drop table if exists `solicit`;
+    drop table if exists `request_`;
 
     drop table if exists `user_account`;
 

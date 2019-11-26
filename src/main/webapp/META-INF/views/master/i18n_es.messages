@@ -76,7 +76,9 @@ master.menu.provider.request.create = Crear solicitud
 
 master.menu.consumer = Consumidor
 master.menu.consumer.offer.create= Crear oferta
-
+# master.menu.employer ########################################################
+master.menu.employer = Empleador
+master.menu.employer.duty.create = Crear deberes
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta

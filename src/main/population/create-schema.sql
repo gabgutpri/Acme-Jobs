@@ -97,6 +97,15 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `duty` (
+       `id` integer not null,
+        `version` integer not null,
+        `description` varchar(255),
+        `percentage` double precision not null,
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `investor_record` (
        `id` integer not null,
         `version` integer not null,
@@ -142,7 +151,7 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `solicit` (
+    create table `request_` (
        `id` integer not null,
         `version` integer not null,
         `deadline` datetime(6),
@@ -172,12 +181,15 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
+create index IDXrodri2m1upnn62iu65kfktvny on `company_record` (`number_stars`);
+create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
 
     alter table `offer` 
        add constraint UK_iex7e8fs0fh89yxpcnm1orjkm unique (`ticker`);
 
-    alter table `solicit` 
-       add constraint UK_4pjhg5dc8xt94p4gw8htonw1s unique (`ticker`);
+    alter table `request_` 
+       add constraint UK_4kaq4lybvdlfnbqjbdbwjlqkl unique (`ticker`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
