@@ -87,16 +87,11 @@
 
 		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">
 			<acme:menu-suboption code="master.menu.employer.duty.create" action="/employer/duty/create"/>
-		</acme:menu-option>
-  
-		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')" >
 			<acme:menu-suboption code="master.menu.employer.job.list" action="/employer/job/list-mine"/>
-		</acme:menu-option>	
-		
-
+		</acme:menu-option>
 	</acme:menu-left>
 		
-	</acme:menu-left>
+	
 		<%-- AQUI COMIENZA LA PARTE DERECHA DEL MENU (DONDE ESTA EL LOGIN Y DEMAS) --%>
 		
 	<acme:menu-right>

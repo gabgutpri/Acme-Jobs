@@ -257,7 +257,7 @@
 	  	<property name="userAccount" ref="workerUserAccount01" />
   	</bean>
 	 
-		</bean> 
+		
   
 		<!-- DUTY -->
 		<bean id="duty01" class="acme.entities.dutys.Duty">
