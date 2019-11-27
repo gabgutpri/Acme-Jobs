@@ -17,13 +17,13 @@
 
 <acme:form>
 	
-	<acme:form-textbox code="employer.job.form.label.reference" path="reference"/>
-	<acme:form-textbox code="employer.job.form.label.title" path="title"/>
-	<acme:form-moment code="employer.job.form.label.deadline" path="deadline"/>
-	<acme:form-money code="employer.job.form.label.salary" path="salary"/>
-	<acme:form-url code="employer.job.form.label.moreInfo" path="moreInfo"/>
-	<acme:form-textarea code="employer.job.form.label.description" path="description"/>
+	<acme:form-textbox code="worker.application.form.label.reference" path="reference"/>
+	<acme:form-moment code="worker.application.form.label.moment" path="moment"/>
+	<acme:form-textbox code="worker.application.label.status" path="status"/>
+	<acme:form-textarea code="worker.application.label.statement" path="statement"/>
+	<acme:form-textarea code="worker.application.label.skills" path="skills"/>
+	<acme:form-textarea code="worker.application.form.label.qualifications" path="qualifications"/>
 
-	<acme:form-return code="employer.job.form.button.return"/>
+	<acme:form-return code="worker.application.form.button.return"/>
 	
 </acme:form>
