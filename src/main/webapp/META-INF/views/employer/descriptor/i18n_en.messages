@@ -8,15 +8,9 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
+#DESCRIPTOR FORM
 
-#DUTY FORM
-
-employer.duty.form.label.title = Title
-employer.duty.form.label.description = Description
-employer.duty.form.label.percentage = Percentage
-employer.duty.form.button.create = Create
-employer.duty.form.button.return= Return
-
-
+employer.descriptor.form.label.description = Description
+employer.descriptor.form.button.return= Return
 
 

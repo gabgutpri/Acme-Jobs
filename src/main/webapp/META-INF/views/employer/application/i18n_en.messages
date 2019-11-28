@@ -12,16 +12,15 @@
 #APPLICATION LIST
 
 employer.application.list.label.reference = Reference
-employer.application.list.label.moment = Creation moment
+employer.application.list.label.moment = Creation date
 employer.application.list.label.status = Status
 
 #APPLICATION FORM
 employer.application.form.label.reference = Reference
-employer.application.form.label.moment = Creation moment
+employer.application.form.label.moment = Creation date
 employer.application.form.label.status = Status
 employer.application.form.label.statement = Statement
 employer.application.form.label.skills = Skills
 employer.application.form.label.qualifications = Qualifications
 
 employer.application.form.button.return = Return
-

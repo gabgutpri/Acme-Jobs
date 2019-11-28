@@ -1,4 +1,4 @@
-# i18n_en.messages
+# i18n_es.messages
 #
 # Copyright (c) 2019 Rafael Corchuelo.
 #
@@ -9,14 +9,7 @@
 # they accept any liabilities with respect to them.
 
 
-#DUTY FORM
+#DESCRIPTOR FORM
 
-employer.duty.form.label.title = Title
-employer.duty.form.label.description = Description
-employer.duty.form.label.percentage = Percentage
-employer.duty.form.button.create = Create
-employer.duty.form.button.return= Return
-
-
-
-
+employer.descriptor.form.label.description = Descripción
+employer.descriptor.form.button.return= Volver

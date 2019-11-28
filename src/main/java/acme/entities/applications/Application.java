@@ -56,6 +56,8 @@ public class Application extends DomainEntity {
 	private String				qualifications;
 	// Derived attributes -----------------------------------------------------
 
+	// Relationships ----------------------------------------------------------
+
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
@@ -65,5 +67,4 @@ public class Application extends DomainEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Worker				worker;
-	// Relationships ----------------------------------------------------------
 }

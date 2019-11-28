@@ -23,6 +23,14 @@
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
+    alter table `descriptor_duty` 
+       drop 
+       foreign key `FKkfdnqohjxtpqbexax0q2tufan`;
+
+    alter table `descriptor_duty` 
+       drop 
+       foreign key `FKqitedkrksd2w8qyp1fp5eao9f`;
+
     alter table `employer` 
        drop 
        foreign key FK_na4dfobmeuxkwf6p75abmb2tr;
@@ -60,6 +68,10 @@
     drop table if exists `consumer`;
 
     drop table if exists `customization_parameter`;
+
+    drop table if exists `descriptor`;
+
+    drop table if exists `descriptor_duty`;
 
     drop table if exists `duty`;
 
