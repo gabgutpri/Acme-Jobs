@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>603</x>
-      <y>90</y>
+      <y>72</y>
       <w>216</w>
       <h>54</h>
     </coordinates>
@@ -21,10 +21,10 @@ bg=yellow</panel_attributes>
       <x>810</x>
       <y>27</y>
       <w>144</w>
-      <h>99</h>
+      <h>81</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;90.0;140.0;10.0</additional_attributes>
+    <additional_attributes>10.0;70.0;140.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -75,12 +75,12 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>810</x>
-      <y>99</y>
+      <y>81</y>
       <w>144</w>
-      <h>36</h>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;140.0;20.0</additional_attributes>
+    <additional_attributes>10.0;10.0;140.0;40.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -133,10 +133,10 @@ bg=yellow</panel_attributes>
       <x>603</x>
       <y>45</y>
       <w>117</w>
-      <h>63</h>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>110.0;50.0;10.0;10.0</additional_attributes>
+    <additional_attributes>110.0;30.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -144,10 +144,10 @@ bg=yellow</panel_attributes>
       <x>693</x>
       <y>45</y>
       <w>45</w>
-      <h>63</h>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;30.0;10.0</additional_attributes>
+    <additional_attributes>10.0;30.0;30.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -155,10 +155,10 @@ bg=yellow</panel_attributes>
       <x>693</x>
       <y>45</y>
       <w>144</w>
-      <h>63</h>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;140.0;10.0</additional_attributes>
+    <additional_attributes>10.0;30.0;140.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -265,7 +265,7 @@ bg=yellow</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>540</x>
-      <y>180</y>
+      <y>189</y>
       <w>306</w>
       <h>117</h>
     </coordinates>
@@ -287,15 +287,15 @@ UserAccount
     <id>Relation</id>
     <coordinates>
       <x>693</x>
-      <y>81</y>
+      <y>117</y>
       <w>63</w>
-      <h>234</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;-&gt;
 m1=1
 m2=*
 has v</panel_attributes>
-    <additional_attributes>10.0;240.0;20.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -510,20 +510,20 @@ Employer
     <id>Relation</id>
     <coordinates>
       <x>810</x>
-      <y>99</y>
+      <y>81</y>
       <w>144</w>
-      <h>117</h>
+      <h>135</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;140.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;140.0;130.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>729</x>
-      <y>693</y>
-      <w>360</w>
-      <h>171</h>
+      <x>1350</x>
+      <y>576</y>
+      <w>288</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>Duty
 --
@@ -535,8 +535,8 @@ Employer
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1224</x>
-      <y>63</y>
+      <x>1359</x>
+      <y>99</y>
       <w>297</w>
       <h>126</h>
     </coordinates>
@@ -555,15 +555,15 @@ Employer
     <id>Relation</id>
     <coordinates>
       <x>1107</x>
-      <y>126</y>
-      <w>135</w>
-      <h>90</h>
+      <y>162</y>
+      <w>270</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 Registered by ^</panel_attributes>
-    <additional_attributes>10.0;80.0;130.0;10.0</additional_attributes>
+    <additional_attributes>10.0;40.0;280.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -584,18 +584,18 @@ Worker
     <id>Relation</id>
     <coordinates>
       <x>810</x>
-      <y>99</y>
+      <y>81</y>
       <w>144</w>
-      <h>207</h>
+      <h>225</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;140.0;210.0</additional_attributes>
+    <additional_attributes>10.0;10.0;140.0;230.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1260</x>
-      <y>369</y>
+      <x>1071</x>
+      <y>414</y>
       <w>360</w>
       <h>117</h>
     </coordinates>
@@ -612,16 +612,16 @@ Worker
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1359</x>
-      <y>180</y>
-      <w>90</w>
-      <h>207</h>
+      <x>1386</x>
+      <y>216</y>
+      <w>144</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 Made to ^</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
+    <additional_attributes>130.0;10.0;10.0;220.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -632,7 +632,7 @@ Made to ^</panel_attributes>
       <h>81</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
-Satus
+Status
 --
 + PENDING
 + ACCEPTED
@@ -646,13 +646,54 @@ bg=orange</panel_attributes>
     <coordinates>
       <x>1116</x>
       <y>342</y>
-      <w>162</w>
-      <h>108</h>
+      <w>81</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 Realize &gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;160.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1467</x>
+      <y>405</y>
+      <w>189</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>Descriptor
+--
++ description: String{NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1539</x>
+      <y>216</y>
+      <w>99</w>
+      <h>207</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1
+m2=0..1
+describes v</panel_attributes>
+    <additional_attributes>10.0;210.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1530</x>
+      <y>441</y>
+      <w>90</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1..*
+m2=0..1
+contains v</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

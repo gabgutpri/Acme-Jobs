@@ -9,10 +9,10 @@
 # they accept any liabilities with respect to them.
 
 
-#EMPLOYER FORM
+#DUTY FORM
 
 employer.duty.form.label.title = Título
 employer.duty.form.label.description = Descripción
-employer.duty.form.label.percentage = Porcentaje
-employer.duty.form.button.create= Crear
+employer.duty.form.label.percentage = Porcentage
+employer.duty.form.button.create = Crear
 employer.duty.form.button.return= Volver
