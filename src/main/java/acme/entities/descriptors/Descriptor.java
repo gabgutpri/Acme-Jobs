@@ -9,7 +9,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-import acme.entities.dutys.Duty;
+import acme.entities.duties.Duty;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
