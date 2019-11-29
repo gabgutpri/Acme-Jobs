@@ -22,6 +22,7 @@ employer.job.form.label.deadline = Deadline
 employer.job.form.label.salary = Salary
 employer.job.form.label.moreInfo = More Info
 employer.job.form.label.title =Title
+employer.job.form.label.descriptor= Description of descriptor
 
 employer.job.form.button.return = Return
 

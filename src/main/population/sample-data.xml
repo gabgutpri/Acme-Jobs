@@ -305,6 +305,11 @@
 			<property name="description" value="Description3"/>
 			<property name="percentage" value="50"/>
 	</bean> 
+	<bean id="duty04" class="acme.entities.duties.Duty">
+			<property name="title" value="Title4"/>
+			<property name="description" value="Description4"/>
+			<property name="percentage" value="50"/>
+	</bean> 
 		
 	<!--  Employer -->
 	<bean name="employer1UserAccount" class="acme.framework.entities.UserAccount">
@@ -375,6 +380,7 @@
 	  	<property name="moreInfo" value="http://www.contigoPipo.com"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer1Employer"/>
+		<property name="descriptor" ref="descriptor01"/>
 	</bean>
 		
 	<bean name="job2" class="acme.entities.jobs.Job">
@@ -386,6 +392,7 @@
 	  	<property name="moreInfo" value="http://www.contigoPipo.com"/>
 	  	<property name="finalMode" value="true"/>
   		<property name="employer" ref="employer1Employer"/>
+  		<property name="descriptor" ref="descriptor02"/>
 	</bean>	
 	
 	<bean name="job3" class="acme.entities.jobs.Job">
@@ -397,6 +404,7 @@
 	  	<property name="moreInfo" value="http://www.contigoPipo.com"/>
 	  	<property name="finalMode" value="true"/>
   		<property name="employer" ref="employer2Employer"/>
+  		<property name="descriptor" ref="descriptor03"/>
 	</bean>	
 		
 	<!-- APPLICATIONS -->
@@ -446,12 +454,13 @@
 	
 	<!-- Descriptor -->
 	<bean id="descriptor01" class="acme.entities.descriptors.Descriptor">
-		<property name="description" value="Description1"/>
+		<property name="description" value="Vengo del descriptor 1 D:"/>
 		<property name="duty" ref="duty01"/>
 	</bean> 
+	
 		
 	<bean id="descriptor02" class="acme.entities.descriptors.Descriptor">
-		<property name="description" value="Description2"/>
+		<property name="description" value="Soy del descriptor 2 :D"/>
 		<property name="duty">
 			<list>
 				<ref bean="duty02"/>
@@ -459,6 +468,11 @@
 			</list>
 		</property>
 	</bean> 
-		
+	
+	
+	<bean id="descriptor03" class="acme.entities.descriptors.Descriptor">
+		<property name="description" value="Description3"/>
+		<property name="duty" ref="duty04"/>
+	</bean> 	
 </beans>
 

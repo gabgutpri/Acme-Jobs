@@ -162,6 +162,7 @@
         `salary_amount` double precision,
         `salary_currency` varchar(255),
         `title` varchar(255),
+        `descriptor_id` integer not null,
         `employer_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -306,6 +307,11 @@ create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
        add constraint FK_na4dfobmeuxkwf6p75abmb2tr 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `job` 
+       add constraint `FKfqwyynnbcsq0htxho3vchpd2u` 
+       foreign key (`descriptor_id`) 
+       references `descriptor` (`id`);
 
     alter table `job` 
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 

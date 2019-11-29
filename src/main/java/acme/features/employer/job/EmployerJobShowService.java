@@ -4,6 +4,7 @@ package acme.features.employer.job;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.descriptors.Descriptor;
 import acme.entities.jobs.Job;
 import acme.entities.roles.Employer;
 import acme.framework.components.Model;
@@ -30,6 +31,7 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 		Principal principal;
 
 		Job job;
+
 		jobId = request.getModel().getInteger("id");
 		job = this.repository.findOneJobById(jobId);
 		employer = job.getEmployer();
@@ -44,7 +46,9 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 		assert entity != null;
 		assert model != null;
 
+		Descriptor descriptor = entity.getDescriptor();
 		request.unbind(entity, model, "title", "reference", "moreInfo", "salary", "description", "finalMode", "deadline");
+		model.setAttribute("descriptor", descriptor.getDescription());
 	}
 
 	@Override
