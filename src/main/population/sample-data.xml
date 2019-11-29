@@ -288,19 +288,19 @@
 	 
 	
 	<!-- DUTY -->
-	<bean id="duty01" class="acme.entities.dutys.Duty">
+	<bean id="duty01" class="acme.entities.duties.Duty">
 			<property name="title" value="Title1"/>
 			<property name="description" value="Description1"/>
 			<property name="percentage" value="12.2"/>
 	</bean> 
 		
-	<bean id="duty02" class="acme.entities.dutys.Duty">
+	<bean id="duty02" class="acme.entities.duties.Duty">
 			<property name="title" value="Title2"/>
 			<property name="description" value="Description2"/>
 			<property name="percentage" value="100"/>
 	</bean> 
 		
-	<bean id="duty03" class="acme.entities.dutys.Duty">
+	<bean id="duty03" class="acme.entities.duties.Duty">
 			<property name="title" value="Title3"/>
 			<property name="description" value="Description3"/>
 			<property name="percentage" value="50"/>

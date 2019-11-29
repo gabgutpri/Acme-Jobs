@@ -17,6 +17,9 @@
 	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
+<definition name="employer/duty/list" extends="master">
+		<put-attribute name="body" type="template" value="../employer/duty/list.jsp" />
+	</definition>
 	
 	<definition name="employer/duty/form" extends="master">
 		<put-attribute name="body" type="template" value="../employer/duty/form.jsp" />

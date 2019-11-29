@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.entities.dutys;
+package acme.entities.duties;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;

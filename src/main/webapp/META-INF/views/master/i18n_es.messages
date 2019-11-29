@@ -85,7 +85,7 @@ master.menu.worker.application.list= Lista de solicitudes
 # master.menu.employer ########################################################
 
 master.menu.employer = Empleador
-master.menu.employer.duty.create = Crear deberes
+master.menu.employer.duty.list = Listar deberes
 master.menu.employer.job.list= Lista de trabajos
 master.menu.employer.application.list= Lista de solicitudes
 
