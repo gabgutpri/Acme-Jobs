@@ -38,6 +38,7 @@
 			<acme:menu-suboption code="master.menu.authenticated.investor-record.list" action="/authenticated/investor-record/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.offer.list" action="/authenticated/offer/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.request.list" action="/authenticated/request/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.job.list" action="/authenticated/job/list-active"/>
 		</acme:menu-option>
 	
 		<%-- COSAS DE ADMIN --%>

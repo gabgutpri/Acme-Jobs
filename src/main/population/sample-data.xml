@@ -382,7 +382,7 @@
 		<property name="salary" value="12,000.99€"/>
 		<property name="description" value="Description of job 1"/>
 	  	<property name="moreInfo" value="http://www.contigoPipo.com"/>
-		<property name="finalMode" value="true"/>
+		<property name="status" value="PUBLISHED"/>
 		<property name="employer" ref="employer1Employer"/>
 		<property name="descriptor" ref="descriptor01"/>
 	</bean>
@@ -394,7 +394,7 @@
 	  	<property name="salary" value="30,000.99€"/>
   		<property name="description" value="Description of job 2"/>
 	  	<property name="moreInfo" value="http://www.contigoPipo.com"/>
-	  	<property name="finalMode" value="true"/>
+	  	<property name="status" value="DRAFT"/>
   		<property name="employer" ref="employer1Employer"/>
   		<property name="descriptor" ref="descriptor02"/>
 	</bean>	
@@ -406,7 +406,7 @@
 	  	<property name="salary" value="30,001.99€"/>
   		<property name="description" value="Description of job 3"/>
 	  	<property name="moreInfo" value="http://www.contigoPipo.com"/>
-	  	<property name="finalMode" value="true"/>
+	  	<property name="status" value="PUBLISHED"/>
   		<property name="employer" ref="employer2Employer"/>
   		<property name="descriptor" ref="descriptor03"/>
 	</bean>	

@@ -53,16 +53,25 @@ public class Job extends DomainEntity {
 	@URL
 	private String				moreInfo;
 
-	private boolean				finalMode;
+	private Status				status;
 	// Derived attributes -----------------------------------------------------
 
-	@NotNull
-	@Valid
-	@ManyToOne(optional = false)
-	private Descriptor			descriptor;
+
+	public boolean isActive() {
+		Date now = new Date();
+		boolean res = this.getStatus().equals(Status.PUBLISHED) && this.getDeadline().after(now);
+		return res;
+	}
+
+
 	// Relationships ----------------------------------------------------------
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Employer			employer;
+	private Employer	employer;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Descriptor	descriptor;
 }
