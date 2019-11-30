@@ -28,16 +28,16 @@
 	
 	  <h2>Duties:</h2>
 	
-
+	<acme:form>
+	
 	<jstl:forEach items="${duties}" var="duty">
-	
-	<jstl:out value ="${duty.getTitle()}"/>
-	
-	<jstl:out value	="${duty.getDescription()}"/>
-	<jstl:out value="${duty.getPercentage()}"/>
+		<jstl:out value ="${duty.getTitle()}"/><br>	
+		<jstl:out value	="${duty.getDescription()}"/><br>
+		<jstl:out value="${duty.getPercentage()}"/><br>
+		<br>
 	</jstl:forEach>
-
-
+	
+	</acme:form> 
 
 	<acme:form-return code="employer.job.form.button.return"/>
 	
