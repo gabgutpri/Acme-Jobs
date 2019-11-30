@@ -84,7 +84,6 @@ master.menu.worker.application.list= List applications
 # master.menu.employer ########################################################
 
 master.menu.employer = Employer
-master.menu.employer.duty.list = List duties
 master.menu.employer.job.list= List jobs
 master.menu.employer.application.list= List applications
 

@@ -118,17 +118,13 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `descriptor_duty` (
-       `descriptor_id` integer not null,
-        `duty_id` integer not null
-    ) engine=InnoDB;
-
     create table `duty` (
        `id` integer not null,
         `version` integer not null,
         `description` varchar(255),
         `percentage` double precision not null,
         `title` varchar(255),
+        `descriptor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -246,9 +242,6 @@ create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
     alter table `application` 
        add constraint UK_ct7r18vvxl5g4c4k7aefpa4do unique (`reference`);
 create index IDXrodri2m1upnn62iu65kfktvny on `company_record` (`number_stars`);
-
-    alter table `descriptor_duty` 
-       add constraint UK_8vrjy2e5jhfnph4um4uqikkih unique (`duty_id`);
 create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
 
     alter table `job` 
@@ -293,13 +286,8 @@ create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
-    alter table `descriptor_duty` 
-       add constraint `FKkfdnqohjxtpqbexax0q2tufan` 
-       foreign key (`duty_id`) 
-       references `duty` (`id`);
-
-    alter table `descriptor_duty` 
-       add constraint `FKqitedkrksd2w8qyp1fp5eao9f` 
+    alter table `duty` 
+       add constraint `FK3cc3garl37bl7gswreqwr7pj4` 
        foreign key (`descriptor_id`) 
        references `descriptor` (`id`);
 

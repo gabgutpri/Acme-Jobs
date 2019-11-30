@@ -24,6 +24,19 @@
 	<acme:form-url code="employer.job.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textarea code="employer.job.form.label.description" path="description"/>
 	<acme:form-textarea readonly="true" code="employer.job.form.label.descriptor" path="descriptor"/>
+	
+	
+	  <h2>Duties:</h2>
+	
+
+	<jstl:forEach items="${duties}" var="duty">
+	
+	<jstl:out value ="${duty.getTitle()}"/>
+	
+	<jstl:out value	="${duty.getDescription()}"/>
+	<jstl:out value="${duty.getPercentage()}"/>
+	</jstl:forEach>
+
 
 
 	<acme:form-return code="employer.job.form.button.return"/>

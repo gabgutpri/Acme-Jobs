@@ -18,5 +18,12 @@
 <acme:form readonly="true">
 	<acme:form-textarea code="employer.descriptor.form.label.description" path="description"/>
 	
+	
+	<!--<jstl:forEach items="${duties}" var="duty">
+			${duty.getTitle()}<br>
+			${duty.getDescription()}<br>
+			${duty.getPercentage()}<br>
+	</jstl:forEach>
+	-->
 	<acme:form-return code="employer.descriptor.form.button.return"/>
 </acme:form>
