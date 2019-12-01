@@ -1,6 +1,6 @@
 
 package acme.components;
 
-public enum Status {
+public enum StatusApplication {
 	PENDING, ACCEPTED, REJECTED
 }

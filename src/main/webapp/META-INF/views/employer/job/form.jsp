@@ -15,7 +15,7 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form>
+<acme:form readonly="true">
 	
 	<acme:form-textbox code="employer.job.form.label.reference" path="reference"/>
 	<acme:form-textbox code="employer.job.form.label.title" path="title"/>
@@ -25,7 +25,7 @@
 	<acme:form-textarea code="employer.job.form.label.description" path="description"/>
 	<acme:form-textarea readonly="true" code="employer.job.form.label.descriptor" path="descriptor"/>
 
-
+	<acme:form-submit code="employer.auditRecord.button.list" action="/employer/auditRecord/list-corresponding"/>
 	<acme:form-return code="employer.job.form.button.return"/>
 	
 </acme:form>

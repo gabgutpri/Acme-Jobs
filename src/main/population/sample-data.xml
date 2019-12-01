@@ -369,6 +369,46 @@
 	<bean name="employer2Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="employer2UserAccount"/>
 	</bean>
+	
+	<!-- Auditor -->
+  	<bean name="auditorUserAccount01" class="acme.framework.entities.UserAccount">
+	  	<property name="username" value="auditor1" />
+	  	<property name="password" value="auditor1" />
+	  	<property name="enabled" value="true" />
+  		<property name="identity">
+		  	<bean class="acme.datatypes.UserIdentity">
+		  		<property name="name" value="Auditor1" />
+		  		<property name="surname" value="theAuditor" />
+		  		<property name="email" value="auditor1@acme.com" />
+		  	</bean>
+	  	</property>
+	  	<property name="roles">
+		  	<list>
+		  		<ref bean="auditor1Auditor" />
+		  		<ref bean="auditor1Authenticated" />
+		  	</list>
+		  </property>
+	  </bean>
+
+	  <bean name="auditor1Auditor" class="acme.entities.roles.Auditor">
+  		<property name="userAccount" ref="auditorUserAccount01" />
+		<property name="firm" value="Firm"/>
+		<property name="statement" value="Responsability statement"/>
+	  </bean>
+	  
+  	<bean name="auditor1Authenticated" class="acme.framework.entities.Authenticated">
+	  	<property name="userAccount" ref="auditorUserAccount01" />
+  	</bean>
+	
+	<!-- AUDITRECORD -->
+	<bean name="auditRecord1" class="acme.entities.auditRecords.AuditRecord">
+	  	<property name="title" value="title"/>
+	  	<property name="moment" value="2019/11/26 23:50"/>
+	  	<property name="status" value="DRAFT"/>
+	  	<property name="body" value="Body"/>
+		<property name="auditor" ref="auditor1Auditor"/>
+		<property name="job" ref="job1"/>
+	</bean>
 		
 	<!-- JOBS -->
 	<bean name="job1" class="acme.entities.jobs.Job">
@@ -474,5 +514,6 @@
 		<property name="description" value="Description3"/>
 		<property name="duty" ref="duty04"/>
 	</bean> 	
+  	
 </beans>
 
