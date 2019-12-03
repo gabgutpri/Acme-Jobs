@@ -23,6 +23,7 @@ authenticated.job.form.label.salary = Salary
 authenticated.job.form.label.moreInfo = More Info
 authenticated.job.form.label.title =Title
 authenticated.job.form.label.descriptor= Description of descriptor
+authenticated.job.form.descriptor.duties = Duties
 
 authenticated.job.form.button.return = Return
 

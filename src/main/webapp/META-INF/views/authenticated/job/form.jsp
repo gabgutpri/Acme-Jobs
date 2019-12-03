@@ -26,18 +26,17 @@
 	<acme:form-textarea readonly="true" code="authenticated.job.form.label.descriptor" path="descriptor"/>
 	
 	
-	  <h2>Duties:</h2>
-	
+	<strong><acme:message  code="authenticated.job.form.descriptor.duties"/></strong><br>
+    <br><acme:form>
 
-	<jstl:forEach items="${duties}" var="duty">
-	
-	<jstl:out value ="${duty.getTitle()}"/>
-	
-	<jstl:out value	="${duty.getDescription()}"/>
-	<jstl:out value="${duty.getPercentage()}"/>
-	</jstl:forEach>
+    <jstl:forEach items="${duties}" var="duty">
+        <jstl:out value ="${duty.getTitle()}"/><br>
+        <jstl:out value    ="${duty.getDescription()}"/><br>
+        <jstl:out value="${duty.getPercentage()}"/><br>
+        <br>
+    </jstl:forEach>
 
-
+    </acme:form>
 
 	<acme:form-return code="authenticated.job.form.button.return"/>
 	
