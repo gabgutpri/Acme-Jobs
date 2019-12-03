@@ -11,15 +11,15 @@
 
 #auditRecord LIST
 
-auditor.auditRecord.list.label.title = Titulo
-auditor.auditRecord.list.label.status = Estado
-auditor.auditRecord.list.label.moment = Momento de creacion
+employer.auditRecord.list.label.title = Titulo
+employer.auditRecord.list.label.status = Estado
+employer.auditRecord.list.label.moment = Momento de creacion
 
 #auditRecord FORM
 
-auditor.auditRecord.from.label.title = Titulo
-auditor.auditRecord.from.label.status = Estado
-auditor.auditRecord.from.label.moment = Momento de creacion
-auditor.auditRecord.from.label.body = Cuerpo
+employer.auditRecord.form.label.title = Titulo
+employer.auditRecord.form.label.status = Estado
+employer.auditRecord.form.label.moment = Momento de creacion
+employer.auditRecord.form.label.body = Cuerpo
 
-auditor.auditRecord.form.button.return = Volver
+employer.auditRecord.form.button.return = Volver

@@ -43,9 +43,9 @@ public class EmployerAuditRecordListCorrespondingService implements AbstractList
 		assert request != null;
 
 		Collection<AuditRecord> result;
-		int id;
+		Integer id;
 
-		id = request.getModel().getInteger("id");
+		id = new Integer(request.getServletRequest().getParameter("id"));
 		result = this.repository.findManyCorrespondingByJobId(id);
 
 		return result;

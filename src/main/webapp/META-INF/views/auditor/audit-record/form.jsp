@@ -16,7 +16,6 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="true">
-	
 	<acme:form-textbox code="auditor.auditRecord.form.label.title" path="title"/>
 	<acme:form-textbox code="auditor.auditRecord.form.label.status" path="status"/>
 	<acme:form-moment code="auditor.auditRecord.form.label.moment" path="moment"/>

@@ -24,5 +24,6 @@ employer.job.form.label.moreInfo = More Info
 employer.job.form.label.title =Title
 employer.job.form.label.descriptor= Description of descriptor
 
+employer.auditRecord.button.list = List audit records of this job
 employer.job.form.button.return = Return
 

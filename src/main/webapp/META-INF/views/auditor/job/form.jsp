@@ -23,9 +23,9 @@
 	<acme:form-money code="auditor.job.form.label.salary" path="salary"/>
 	<acme:form-url code="auditor.job.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textarea code="auditor.job.form.label.description" path="description"/>
-	<acme:form-textarea readonly="true" code="auditor.job.form.label.descriptor" path="descriptor"/>
+	<acme:form-textarea code="auditor.job.form.label.descriptor" path="descriptor"/>
 	
-	<acme:form-submit code="auditor.auditRecord.form.list-corresponding" action="/auditor/auditRecord/list-corresponding"/>
+	<acme:form-submit code="auditor.auditRecord.button.list" method="get" action="/auditor/audit-record/list-corresponding?id=${id}"/>
 	<acme:form-return code="auditor.job.form.button.return"/>
 	
 </acme:form>

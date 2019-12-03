@@ -25,7 +25,7 @@
 	<acme:form-textarea code="employer.job.form.label.description" path="description"/>
 	<acme:form-textarea readonly="true" code="employer.job.form.label.descriptor" path="descriptor"/>
 
-	<acme:form-submit code="employer.auditRecord.button.list" action="/employer/auditRecord/list-corresponding"/>
+	<acme:form-submit code="employer.auditRecord.button.list" method="get" action="/employer/audit-record/list-corresponding?id=${id}"/>
 	<acme:form-return code="employer.job.form.button.return"/>
 	
 </acme:form>

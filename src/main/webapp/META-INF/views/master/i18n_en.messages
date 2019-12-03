@@ -91,8 +91,8 @@ master.menu.employer.application.list= List applications
 # master.menu.auditor ########################################################
 
 master.menu.auditor = Auditor
-master.menu.auditor.job.listWritten = List of job that have an auditRecord
-master.menu.auditor.job.listNotWritten = List of job that don´t have an auditRecord
+master.menu.auditor.job.list = List of job that have an auditRecord
+master.menu.auditor.job.list-not-written = List of job that don´t have an auditRecord
 
 # master.menu.user-account ####################################################
 

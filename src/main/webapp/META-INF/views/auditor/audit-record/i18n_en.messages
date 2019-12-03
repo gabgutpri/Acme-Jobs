@@ -1,4 +1,4 @@
-# i18n_es.messages
+# i18n_en.messages
 #
 # Copyright (c) 2019 Rafael Corchuelo.
 #
@@ -11,15 +11,16 @@
 
 #auditRecord LIST
 
-employer.auditRecord.list.label.title = Titulo
-employer.auditRecord.list.label.status = Estado
-employer.auditRecord.list.label.moment = Momento de creacion
+auditor.auditRecord.list.label.title = Title
+auditor.auditRecord.list.label.status = Status
+auditor.auditRecord.list.label.moment = Moment of creation
 
 #auditRecord FORM
 
-employer.auditRecord.from.label.title = Titulo
-employer.auditRecord.from.label.status = Estado
-employer.auditRecord.from.label.moment = Momento de creacion
-employer.auditRecord.from.label.body = Cuerpo
+auditor.auditRecord.form.label.title = Title
+auditor.auditRecord.form.label.status = Status
+auditor.auditRecord.form.label.moment = Moment of creation
+auditor.auditRecord.form.label.body = Body
 
-employer.auditRecord.form.button.return = Volver
+auditor.auditRecord.form.button.return = Return
+

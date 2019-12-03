@@ -19,10 +19,10 @@ public class AuditorJobController extends AbstractController<Auditor, Job> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuditorJobListWrittenService	writtenService;
+	private AuditorJobListWrittenService	listWrittenService;
 
 	@Autowired
-	private AuditorJobListNotWrittenService	notWrittenService;
+	private AuditorJobListNotWrittenService	listNotWrittenService;
 
 	@Autowired
 	private AuditorJobShowService			showService;
@@ -32,8 +32,8 @@ public class AuditorJobController extends AbstractController<Auditor, Job> {
 
 	@PostConstruct
 	private void initialise() {
-		super.addCustomCommand(CustomCommand.WRITTEN, BasicCommand.LIST, this.writtenService);
-		super.addCustomCommand(CustomCommand.NOT_WRITTEN, BasicCommand.LIST, this.notWrittenService);
+		super.addCustomCommand(CustomCommand.LIST_WRITTEN, BasicCommand.LIST, this.listWrittenService);
+		super.addCustomCommand(CustomCommand.LIST_NOT_WRITTEN, BasicCommand.LIST, this.listNotWrittenService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 }

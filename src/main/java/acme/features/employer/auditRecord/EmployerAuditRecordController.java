@@ -14,12 +14,12 @@ import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 
 @Controller
-@RequestMapping("/employer/auditRecord/")
+@RequestMapping("/employer/audit-record/")
 public class EmployerAuditRecordController extends AbstractController<Employer, AuditRecord> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private EmployerAuditRecordListCorrespondingService	correspondingService;
+	private EmployerAuditRecordListCorrespondingService	listCorrespondingService;
 
 	@Autowired
 	private EmployerAuditRecordShowService				showService;
@@ -29,7 +29,7 @@ public class EmployerAuditRecordController extends AbstractController<Employer, 
 
 	@PostConstruct
 	private void initialise() {
-		super.addCustomCommand(CustomCommand.CORRESPONDING, BasicCommand.LIST, this.correspondingService);
+		super.addCustomCommand(CustomCommand.LIST_CORRESPONDING, BasicCommand.LIST, this.listCorrespondingService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 }

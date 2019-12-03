@@ -93,8 +93,8 @@
 		<%-- COSAS DE AUDITOR --%>
 
 		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
-			<acme:menu-suboption code="master.menu.auditor.job.written" action="/auditor/job/written"/>
-			<acme:menu-suboption code="master.menu.auditor.job.not-written" action="/auditor/job/not-written"/>
+			<acme:menu-suboption code="master.menu.auditor.job.list" action="/auditor/job/list-written"/>
+			<acme:menu-suboption code="master.menu.auditor.job.list-not-written" action="/auditor/job/list-not-written"/>
 		</acme:menu-option>
 	</acme:menu-left>
 		

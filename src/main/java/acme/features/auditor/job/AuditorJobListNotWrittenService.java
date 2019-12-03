@@ -44,10 +44,13 @@ public class AuditorJobListNotWrittenService implements AbstractListService<Audi
 		assert request != null;
 
 		Collection<Job> result;
+		Collection<Job> written;
 		Principal principal;
 
 		principal = request.getPrincipal();
-		result = this.repository.findManyNotWrittenByAuditorId(principal.getActiveRoleId());
+		written = this.repository.findManyWrittenByAuditorId(principal.getActiveRoleId());
+		result = this.repository.findAllJob();
+		result.removeAll(written);
 
 		return result;
 	}

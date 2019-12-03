@@ -18,12 +18,12 @@
 
 <tiles-definitions>
 	
-	<definition name="employer/auditRecord/list-corresponding" extends="master">
-		<put-attribute name="body" type="template" value="../employer/auditRecord/list.jsp" />
+	<definition name="employer/audit-record/list" extends="master">
+		<put-attribute name="body" type="template" value="../employer/audit-record/list.jsp" />
 	</definition>
 	
-	<definition name="employer/auditRecord/form" extends="master">
-		<put-attribute name="body" type="template" value="../employer/auditRecord/form.jsp" />
+	<definition name="employer/audit-record/form" extends="master">
+		<put-attribute name="body" type="template" value="../employer/audit-record/form.jsp" />
 	</definition>
 	
 </tiles-definitions>

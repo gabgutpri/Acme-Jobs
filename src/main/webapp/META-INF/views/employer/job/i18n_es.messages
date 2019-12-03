@@ -24,4 +24,5 @@ employer.job.form.label.moreInfo = Más informacion
 employer.job.form.label.title = Titulo
 employer.job.form.label.descriptor= Descripción del descriptor
 
+employer.auditRecord.button.list = Listar registros de auditorias de este trabajo
 employer.job.form.button.return = Volver
