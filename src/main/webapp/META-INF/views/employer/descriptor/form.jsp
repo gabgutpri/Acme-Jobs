@@ -17,6 +17,7 @@
 
 <acme:form readonly="true">
 	<acme:form-textarea code="employer.descriptor.form.label.description" path="description"/>
+		<acme:form-textarea readonly="true" code="employer.job.form.label.descriptor.duties.title" path="duties.title"/>
 	
 	
 	<!--<jstl:forEach items="${duties}" var="duty">

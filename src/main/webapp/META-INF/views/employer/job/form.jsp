@@ -24,11 +24,11 @@
 	<acme:form-url code="employer.job.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textarea code="employer.job.form.label.description" path="description"/>
 	<acme:form-textarea readonly="true" code="employer.job.form.label.descriptor" path="descriptor"/>
-	
-	
-	  <h2>Duties:</h2>
-	
-	<acme:form>
+
+	  
+	  
+	  <strong><acme:message  code="employer.job.form.descriptor.duties"/></strong><br>
+	<br><acme:form>
 	
 	<jstl:forEach items="${duties}" var="duty">
 		<jstl:out value ="${duty.getTitle()}"/><br>	
