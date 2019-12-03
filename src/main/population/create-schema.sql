@@ -238,11 +238,14 @@
 
     insert into `hibernate_sequence` values ( 1 );
 create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
+create index IDXg3x3iw20tabtrr8amqor0ym9d on `application` (`worker_id`);
+create index IDXcrvjp8sf0i8iqrwto3rffmy0t on `application` (`job_id`);
 
     alter table `application` 
        add constraint UK_ct7r18vvxl5g4c4k7aefpa4do unique (`reference`);
 create index IDXrodri2m1upnn62iu65kfktvny on `company_record` (`number_stars`);
 create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
+create index IDXal59yunywnkwi09ps7jxpr18c on `job` (`status`, `deadline`);
 
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
