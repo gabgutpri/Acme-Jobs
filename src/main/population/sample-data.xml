@@ -459,6 +459,79 @@
 			</list>
 		</property>
 	</bean> 
-		
+	
+	<!-- Messages -->
+	
+	<bean id="message01" class="acme.entities.messages.Message">
+		<property name="title" value="Mary"/>
+		<property name="moment" value="2019/11/1 8:35"/>
+		<property name="tags" value="Informal"/>
+		<property name="body" value="Hola, donde estas Leslie?"/>
+	</bean>
+	
+	<bean id="message02" class="acme.entities.messages.Message">
+		<property name="title" value="Leslie"/>
+		<property name="moment" value="2019/11/1 12:50"/>
+		<property name="tags" value="Informal"/>
+		<property name="body" value="Pues estoy super ocupado/a con otra cosa..."/>
+	</bean>
+	
+	<bean id="message03" class="acme.entities.messages.Message">
+		<property name="title" value="John"/>
+		<property name="moment" value="2019/11/1 12:51"/>
+		<property name="tags" value="Informal"/>
+		<property name="body" value="Tranquilo/a, ya no tendras que preocuparte mas por DP..."/>
+	</bean>
+	
+	<bean id="message04" class="acme.entities.messages.Message">
+		<property name="title" value="John"/>
+		<property name="moment" value="2019/10/29 10:36"/>
+		<property name="tags" value="Informal"/>
+		<property name="body" value="Entonces estamos de acuerdo con expulsar a Leslie del grupo."/>
+	</bean>
+	
+	<bean id="message05" class="acme.entities.messages.Message">
+		<property name="title" value="Mary"/>
+		<property name="moment" value="2019/10/29 10:37"/>
+		<property name="tags" value="Informal"/>
+		<property name="body" value="Si, no tenemos otra opcion."/>
+	</bean>
+	
+	<!-- MessageThreads -->
+	<bean id="messageThread01" class="acme.entities.messageThreads.MessageThread">
+		<property name="title" value="Grupo Trabajo"/>
+		<property name="moment" value="2019/10/4 10:35"/>
+		<property name="users">
+			<list>
+				<ref bean="workerUserAccount01"/>
+				<ref bean="workerUserAccount02"/>
+				<ref bean="employer1UserAccount"/>
+			</list>
+		</property>
+		<property name="messages">
+			<list>
+				<ref bean="message01"/>
+				<ref bean="message02"/>
+				<ref bean="message03"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="messageThread02" class="acme.entities.messageThreads.MessageThread">
+		<property name="title" value="Grupo sin Leslie"/>
+		<property name="moment" value="2019/10/29 10:35"/>
+		<property name="users">
+			<list>
+				<ref bean="workerUserAccount01"/>
+				<ref bean="employer1UserAccount"/>
+			</list>
+		</property>
+		<property name="messages">
+			<list>
+				<ref bean="message04"/>
+				<ref bean="message05"/>
+			</list>
+		</property>
+	</bean>
 </beans>
 

@@ -38,6 +38,11 @@
 			<acme:menu-suboption code="master.menu.authenticated.investor-record.list" action="/authenticated/investor-record/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.offer.list" action="/authenticated/offer/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.request.list" action="/authenticated/request/list"/>
+			
+			<acme:menu-separator/>
+			
+			<acme:menu-suboption code="master.menu.authenticated,messageThread.list" action="/authenticated/message-thread/list-mine"/>
+			
 		</acme:menu-option>
 	
 		<%-- COSAS DE ADMIN --%>

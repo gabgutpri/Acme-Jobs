@@ -47,6 +47,7 @@ master.menu.authenticated.challenge.list = Lista de desafios
 master.menu.authenticated.investor-record.list = Lista de registros de inversores
 master.menu.authenticated.company-record.list = Lista de registros de la compañia
 
+master.menu.authenticated,messageThread.list = Mis conversaciones
 
 # master.menu.administrator ###################################################
 
