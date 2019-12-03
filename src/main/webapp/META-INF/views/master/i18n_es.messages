@@ -48,6 +48,7 @@ master.menu.authenticated.investor-record.list = Lista de registros de inversore
 master.menu.authenticated.company-record.list = Lista de registros de la compañia
 master.menu.authenticated.job.list = Lista de trabajos
 
+master.menu.authenticated,messageThread.list = Mis conversaciones
 
 # master.menu.administrator ###################################################
 
