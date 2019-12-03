@@ -1,22 +1,26 @@
 
-package acme.features.employer.auditRecord;
+package acme.features.authenticated.auditRecord;
+
+import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.auditRecords.AuditRecord;
-import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.services.AbstractShowService;
+import acme.framework.entities.Authenticated;
+import acme.framework.services.AbstractListService;
 
 @Service
-public class EmployerAuditRecordShowService implements AbstractShowService<Employer, AuditRecord> {
+public class AuthenticatedAuditRecordListCorrespondingService implements AbstractListService<Authenticated, AuditRecord> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	EmployerAuditRecordRepository repository;
+	AuthenticatedAuditRecordRepository repository;
 
+
+	// AbstractListService<Administrator, Shout> interface --------------------
 
 	@Override
 	public boolean authorise(final Request<AuditRecord> request) {
@@ -31,18 +35,18 @@ public class EmployerAuditRecordShowService implements AbstractShowService<Emplo
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "status", "moment", "body");
+		request.unbind(entity, model, "title", "status", "moment");
 	}
 
 	@Override
-	public AuditRecord findOne(final Request<AuditRecord> request) {
+	public Collection<AuditRecord> findMany(final Request<AuditRecord> request) {
 		assert request != null;
 
-		AuditRecord result;
-		int id;
+		Collection<AuditRecord> result;
+		Integer id;
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneAuditRecordById(id);
+		id = new Integer(request.getServletRequest().getParameter("id"));
+		result = this.repository.findManyCorrespondingByJobId(id);
 
 		return result;
 	}

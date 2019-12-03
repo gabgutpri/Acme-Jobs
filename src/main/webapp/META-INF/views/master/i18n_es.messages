@@ -91,9 +91,9 @@ master.menu.employer.application.list= Lista de solicitudes
 
 # master.menu.auditor ########################################################
 
-master.menu.employer = Auditor
-master.menu.auditor.job.listWritten = Lista de trabajos que poseen un registro de auditoria
-master.menu.auditor.job.listNotWritten = Lista de trabajos que no poseen un registro de auditoria
+master.menu.auditor = Auditor
+master.menu.auditor.job.list = Lista de trabajos que poseen un registro de auditoria
+master.menu.auditor.job.list-not-written = Lista de trabajos que no poseen un registro de auditoria
 
 # master.menu.user-account ####################################################
 
