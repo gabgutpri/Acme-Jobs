@@ -18,7 +18,7 @@ import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.Length;
 
-import acme.components.Status;
+import acme.components.StatusApplication;
 import acme.entities.jobs.Job;
 import acme.entities.roles.Worker;
 import acme.framework.entities.DomainEntity;
@@ -49,7 +49,7 @@ public class Application extends DomainEntity {
 
 	@NotNull
 	@Enumerated
-	private Status				status;
+	private StatusApplication	status;
 
 	@NotBlank
 	private String				statement;
