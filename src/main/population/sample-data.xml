@@ -413,6 +413,15 @@
 		<property name="auditor" ref="auditor1Auditor"/>
 		<property name="job" ref="job1"/>
 	</bean>
+	
+	<bean name="auditRecord2" class="acme.entities.auditRecords.AuditRecord">
+	  	<property name="title" value="Record published"/>
+	  	<property name="moment" value="2019/11/10 23:00"/>
+	  	<property name="status" value="PUBLISHED"/>
+	  	<property name="body" value="It's not bad."/>
+		<property name="auditor" ref="auditor1Auditor"/>
+		<property name="job" ref="job3"/>
+	</bean>
 		
 	<!-- JOBS -->
 	<bean name="job1" class="acme.entities.jobs.Job">
