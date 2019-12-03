@@ -69,7 +69,6 @@
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.request.create" action="/provider/request/create"/>
-		
 		</acme:menu-option>
 
 		<%-- COSAS DE CONSUMER --%>
@@ -81,7 +80,7 @@
 		<%-- COSAS DE WORKER --%>
 		
 		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">
-			<acme:menu-suboption code="master.menu.worker.application.list" action="/worker/application/list-mine"/>
+			<acme:menu-suboption code="master.menu.worker.application.list" action="/worker/application/list"/>
 		</acme:menu-option>
 		
 	  <%-- COSAS DE EMPLOYER --%>
@@ -89,6 +88,13 @@
 		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">
 			<acme:menu-suboption code="master.menu.employer.job.list" action="/employer/job/list-mine"/>
 			<acme:menu-suboption code="master.menu.employer.application.list" action="/employer/application/list-mine"/>
+		</acme:menu-option>
+		
+		<%-- COSAS DE AUDITOR --%>
+
+		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
+			<acme:menu-suboption code="master.menu.auditor.job.list" action="/auditor/job/list-written"/>
+			<acme:menu-suboption code="master.menu.auditor.job.list-not-written" action="/auditor/job/list-not-written"/>
 		</acme:menu-option>
 	</acme:menu-left>
 		
