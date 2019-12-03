@@ -46,6 +46,7 @@ master.menu.authenticated.request.list = Lista de solicitudes
 master.menu.authenticated.challenge.list = Lista de desafios
 master.menu.authenticated.investor-record.list = Lista de registros de inversores
 master.menu.authenticated.company-record.list = Lista de registros de la compañia
+master.menu.authenticated.job.list = Lista de trabajos
 
 
 # master.menu.administrator ###################################################
@@ -76,6 +77,17 @@ master.menu.provider.request.create = Crear solicitud
 
 master.menu.consumer = Consumidor
 master.menu.consumer.offer.create= Crear oferta
+
+# master.menu.worker ##########################################################
+
+master.menu.worker = Worker
+master.menu.worker.application.list= Lista de solicitudes
+
+# master.menu.employer ########################################################
+
+master.menu.employer = Empleador
+master.menu.employer.job.list= Lista de trabajos
+master.menu.employer.application.list= Lista de solicitudes
 
 # master.menu.user-account ####################################################
 

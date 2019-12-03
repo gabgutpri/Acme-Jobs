@@ -23,6 +23,20 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `application` (
+       `id` integer not null,
+        `version` integer not null,
+        `moment` datetime(6),
+        `qualifications` varchar(255),
+        `reference` varchar(255),
+        `skills` varchar(255),
+        `statement` varchar(255),
+        `status` integer,
+        `job_id` integer not null,
+        `worker_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `authenticated` (
        `id` integer not null,
         `version` integer not null,
@@ -97,6 +111,32 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `descriptor` (
+       `id` integer not null,
+        `version` integer not null,
+        `description` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `duty` (
+       `id` integer not null,
+        `version` integer not null,
+        `description` varchar(255),
+        `percentage` double precision not null,
+        `title` varchar(255),
+        `descriptor_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `employer` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `company` varchar(255),
+        `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `investor_record` (
        `id` integer not null,
         `version` integer not null,
@@ -104,6 +144,22 @@
         `name` varchar(255),
         `sector` varchar(255),
         `stars` integer,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `job` (
+       `id` integer not null,
+        `version` integer not null,
+        `deadline` datetime(6),
+        `description` varchar(255),
+        `more_info` varchar(255),
+        `reference` varchar(255),
+        `salary_amount` double precision,
+        `salary_currency` varchar(255),
+        `status` integer,
+        `title` varchar(255),
+        `descriptor_id` integer not null,
+        `employer_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -142,7 +198,7 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `solicit` (
+    create table `request_` (
        `id` integer not null,
         `version` integer not null,
         `deadline` datetime(6),
@@ -167,17 +223,38 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `worker` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `qualification_records` varchar(255),
+        `skill_records` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `hibernate_sequence` (
        `next_val` bigint
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
+create index IDXg3x3iw20tabtrr8amqor0ym9d on `application` (`worker_id`);
+create index IDXcrvjp8sf0i8iqrwto3rffmy0t on `application` (`job_id`);
+
+    alter table `application` 
+       add constraint UK_ct7r18vvxl5g4c4k7aefpa4do unique (`reference`);
+create index IDXrodri2m1upnn62iu65kfktvny on `company_record` (`number_stars`);
+create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
+create index IDXal59yunywnkwi09ps7jxpr18c on `job` (`status`, `deadline`);
+
+    alter table `job` 
+       add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
 
     alter table `offer` 
        add constraint UK_iex7e8fs0fh89yxpcnm1orjkm unique (`ticker`);
 
-    alter table `solicit` 
-       add constraint UK_4pjhg5dc8xt94p4gw8htonw1s unique (`ticker`);
+    alter table `request_` 
+       add constraint UK_4kaq4lybvdlfnbqjbdbwjlqkl unique (`ticker`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
@@ -192,6 +269,16 @@
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `application` 
+       add constraint `FKoa6p4s2oyy7tf80xwc4r04vh6` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
+
+    alter table `application` 
+       add constraint `FKmbjdoxi3o93agxosoate4sxbt` 
+       foreign key (`worker_id`) 
+       references `worker` (`id`);
+
     alter table `authenticated` 
        add constraint FK_h52w0f3wjoi68b63wv9vwon57 
        foreign key (`user_account_id`) 
@@ -202,7 +289,32 @@
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `duty` 
+       add constraint `FK3cc3garl37bl7gswreqwr7pj4` 
+       foreign key (`descriptor_id`) 
+       references `descriptor` (`id`);
+
+    alter table `employer` 
+       add constraint FK_na4dfobmeuxkwf6p75abmb2tr 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
+    alter table `job` 
+       add constraint `FKfqwyynnbcsq0htxho3vchpd2u` 
+       foreign key (`descriptor_id`) 
+       references `descriptor` (`id`);
+
+    alter table `job` 
+       add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 
+       foreign key (`employer_id`) 
+       references `employer` (`id`);
+
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
+    alter table `worker` 
+       add constraint FK_l5q1f33vs2drypmbdhpdgwfv3 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
