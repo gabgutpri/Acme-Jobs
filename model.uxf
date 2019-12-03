@@ -546,9 +546,8 @@ Employer
 + title: String{NotBlank}
 + deadline: Date{NotNull, Temporal(TIMESTAMP)}
 + salary: Money{NotNull, Valid}
-+ description: String{URL}
 + moreInfo: String{URL}
-+ finalMode: boolean</panel_attributes>
++ status: StatusJob{NotNull}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -562,7 +561,7 @@ Employer
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
-Registered by ^</panel_attributes>
+Registered by &lt;</panel_attributes>
     <additional_attributes>10.0;40.0;280.0;10.0</additional_attributes>
   </element>
   <element>
@@ -626,17 +625,16 @@ Made to ^</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>108</x>
-      <y>441</y>
+      <x>126</x>
+      <y>18</y>
       <w>171</w>
       <h>81</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
-Status
+StatusJob
 --
-+ PENDING
-+ ACCEPTED
-+ REJECTED
++ PUBLISHED
++ DRAFT
 
 bg=orange</panel_attributes>
     <additional_attributes/>
@@ -652,7 +650,7 @@ bg=orange</panel_attributes>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
-Realize &gt;</panel_attributes>
+Realize ^</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
@@ -695,5 +693,23 @@ m1=1..*
 m2=0..1
 contains v</panel_attributes>
     <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>126</x>
+      <y>459</y>
+      <w>171</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+Status
+--
++ PENDING
++ ACCEPTED
++ REJECTED
+
+bg=orange</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

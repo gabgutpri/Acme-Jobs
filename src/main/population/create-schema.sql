@@ -118,17 +118,13 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `descriptor_duty` (
-       `descriptor_id` integer not null,
-        `duty_id` integer not null
-    ) engine=InnoDB;
-
     create table `duty` (
        `id` integer not null,
         `version` integer not null,
         `description` varchar(255),
         `percentage` double precision not null,
         `title` varchar(255),
+        `descriptor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -156,12 +152,13 @@
         `version` integer not null,
         `deadline` datetime(6),
         `description` varchar(255),
-        `final_mode` bit not null,
         `more_info` varchar(255),
         `reference` varchar(255),
         `salary_amount` double precision,
         `salary_currency` varchar(255),
+        `status` integer,
         `title` varchar(255),
+        `descriptor_id` integer not null,
         `employer_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -241,14 +238,14 @@
 
     insert into `hibernate_sequence` values ( 1 );
 create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
+create index IDXg3x3iw20tabtrr8amqor0ym9d on `application` (`worker_id`);
+create index IDXcrvjp8sf0i8iqrwto3rffmy0t on `application` (`job_id`);
 
     alter table `application` 
        add constraint UK_ct7r18vvxl5g4c4k7aefpa4do unique (`reference`);
 create index IDXrodri2m1upnn62iu65kfktvny on `company_record` (`number_stars`);
-
-    alter table `descriptor_duty` 
-       add constraint UK_8vrjy2e5jhfnph4um4uqikkih unique (`duty_id`);
 create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
+create index IDXal59yunywnkwi09ps7jxpr18c on `job` (`status`, `deadline`);
 
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
@@ -292,13 +289,8 @@ create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
-    alter table `descriptor_duty` 
-       add constraint `FKkfdnqohjxtpqbexax0q2tufan` 
-       foreign key (`duty_id`) 
-       references `duty` (`id`);
-
-    alter table `descriptor_duty` 
-       add constraint `FKqitedkrksd2w8qyp1fp5eao9f` 
+    alter table `duty` 
+       add constraint `FK3cc3garl37bl7gswreqwr7pj4` 
        foreign key (`descriptor_id`) 
        references `descriptor` (`id`);
 
@@ -306,6 +298,11 @@ create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
        add constraint FK_na4dfobmeuxkwf6p75abmb2tr 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `job` 
+       add constraint `FKfqwyynnbcsq0htxho3vchpd2u` 
+       foreign key (`descriptor_id`) 
+       references `descriptor` (`id`);
 
     alter table `job` 
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 

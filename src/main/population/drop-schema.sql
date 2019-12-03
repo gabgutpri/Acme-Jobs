@@ -23,17 +23,17 @@
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
-    alter table `descriptor_duty` 
+    alter table `duty` 
        drop 
-       foreign key `FKkfdnqohjxtpqbexax0q2tufan`;
-
-    alter table `descriptor_duty` 
-       drop 
-       foreign key `FKqitedkrksd2w8qyp1fp5eao9f`;
+       foreign key `FK3cc3garl37bl7gswreqwr7pj4`;
 
     alter table `employer` 
        drop 
        foreign key FK_na4dfobmeuxkwf6p75abmb2tr;
+
+    alter table `job` 
+       drop 
+       foreign key `FKfqwyynnbcsq0htxho3vchpd2u`;
 
     alter table `job` 
        drop 
@@ -70,8 +70,6 @@
     drop table if exists `customization_parameter`;
 
     drop table if exists `descriptor`;
-
-    drop table if exists `descriptor_duty`;
 
     drop table if exists `duty`;
 

@@ -16,11 +16,13 @@ employer.job.list.label.deadline = Fecha limite:
 employer.job.list.label.title = Titulo:
 
 #JOB FORM
-employer.job.form.label.description = Description
+employer.job.form.label.status = Estado
 employer.job.form.label.reference = Referencia
 employer.job.form.label.deadline = Fecha límite
 employer.job.form.label.salary = Salario
 employer.job.form.label.moreInfo = Más informacion
 employer.job.form.label.title = Titulo
+employer.job.form.label.descriptor= Descripción del descriptor
+employer.job.form.descriptor.duties = Tareas
 
 employer.job.form.button.return = Volver

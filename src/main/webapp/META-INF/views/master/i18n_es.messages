@@ -46,6 +46,7 @@ master.menu.authenticated.request.list = Lista de solicitudes
 master.menu.authenticated.challenge.list = Lista de desafios
 master.menu.authenticated.investor-record.list = Lista de registros de inversores
 master.menu.authenticated.company-record.list = Lista de registros de la compañia
+master.menu.authenticated.job.list = Lista de trabajos
 
 master.menu.authenticated,messageThread.list = Mis conversaciones
 
@@ -86,7 +87,6 @@ master.menu.worker.application.list= Lista de solicitudes
 # master.menu.employer ########################################################
 
 master.menu.employer = Empleador
-master.menu.employer.duty.create = Crear deberes
 master.menu.employer.job.list= Lista de trabajos
 master.menu.employer.application.list= Lista de solicitudes
 

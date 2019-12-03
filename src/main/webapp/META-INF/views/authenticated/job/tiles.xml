@@ -8,7 +8,7 @@
 - In keeping with the traditional purpose of furthering education and research, it is
 - the policy of the copyright owner to permit non-commercial use and redistribution of
 - this software. It has been tested carefully, but it is not guaranteed for any particular
-- purposes.  The copyright owner does not duty any warranties or representations, nor do
+- purposes.  The copyright owner does not offer any warranties or representations, nor do
 - they accept any liabilities with respect to them.
 -->
 
@@ -17,12 +17,13 @@
 	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-<definition name="employer/duty/list" extends="master">
-		<put-attribute name="body" type="template" value="../employer/duty/list.jsp" />
+	
+	<definition name="authenticated/job/list" extends="master">
+		<put-attribute name="body" type="template" value="../authenticated/job/list.jsp" />
 	</definition>
 	
-	<definition name="employer/duty/form" extends="master">
-		<put-attribute name="body" type="template" value="../employer/duty/form.jsp" />
+	<definition name="authenticated/job/form" extends="master">
+		<put-attribute name="body" type="template" value="../authenticated/job/form.jsp" />
 	</definition>
 	
 </tiles-definitions>

@@ -288,22 +288,31 @@
 	 
 	
 	<!-- DUTY -->
-	<bean id="duty01" class="acme.entities.dutys.Duty">
+	<bean id="duty01" class="acme.entities.duties.Duty">
 			<property name="title" value="Title1"/>
 			<property name="description" value="Description1"/>
 			<property name="percentage" value="12.2"/>
+			<property name="descriptor" ref="descriptor01"/>
 	</bean> 
 		
-	<bean id="duty02" class="acme.entities.dutys.Duty">
+	<bean id="duty02" class="acme.entities.duties.Duty">
 			<property name="title" value="Title2"/>
 			<property name="description" value="Description2"/>
 			<property name="percentage" value="100"/>
+			<property name="descriptor" ref="descriptor02"/>
 	</bean> 
 		
-	<bean id="duty03" class="acme.entities.dutys.Duty">
+	<bean id="duty03" class="acme.entities.duties.Duty">
 			<property name="title" value="Title3"/>
 			<property name="description" value="Description3"/>
 			<property name="percentage" value="50"/>
+			<property name="descriptor" ref="descriptor02"/>
+	</bean> 
+	<bean id="duty04" class="acme.entities.duties.Duty">
+			<property name="title" value="Title4"/>
+			<property name="description" value="Description4"/>
+			<property name="percentage" value="50"/>
+			<property name="descriptor" ref="descriptor03"/>
 	</bean> 
 		
 	<!--  Employer -->
@@ -373,8 +382,9 @@
 		<property name="salary" value="12,000.99€"/>
 		<property name="description" value="Description of job 1"/>
 	  	<property name="moreInfo" value="http://www.contigoPipo.com"/>
-		<property name="finalMode" value="true"/>
+		<property name="status" value="PUBLISHED"/>
 		<property name="employer" ref="employer1Employer"/>
+		<property name="descriptor" ref="descriptor01"/>
 	</bean>
 		
 	<bean name="job2" class="acme.entities.jobs.Job">
@@ -384,8 +394,9 @@
 	  	<property name="salary" value="30,000.99€"/>
   		<property name="description" value="Description of job 2"/>
 	  	<property name="moreInfo" value="http://www.contigoPipo.com"/>
-	  	<property name="finalMode" value="true"/>
+	  	<property name="status" value="DRAFT"/>
   		<property name="employer" ref="employer1Employer"/>
+  		<property name="descriptor" ref="descriptor02"/>
 	</bean>	
 	
 	<bean name="job3" class="acme.entities.jobs.Job">
@@ -395,8 +406,9 @@
 	  	<property name="salary" value="30,001.99€"/>
   		<property name="description" value="Description of job 3"/>
 	  	<property name="moreInfo" value="http://www.contigoPipo.com"/>
-	  	<property name="finalMode" value="true"/>
+	  	<property name="status" value="PUBLISHED"/>
   		<property name="employer" ref="employer2Employer"/>
+  		<property name="descriptor" ref="descriptor03"/>
 	</bean>	
 		
 	<!-- APPLICATIONS -->
@@ -446,20 +458,25 @@
 	
 	<!-- Descriptor -->
 	<bean id="descriptor01" class="acme.entities.descriptors.Descriptor">
-		<property name="description" value="Description1"/>
-		<property name="duty" ref="duty01"/>
+		<property name="description" value="Vengo del descriptor 1 D:"/>
+		<property name="duties" ref="duty01"/>
 	</bean> 
-		
+	
 	<bean id="descriptor02" class="acme.entities.descriptors.Descriptor">
-		<property name="description" value="Description2"/>
-		<property name="duty">
+		<property name="description" value="Soy del descriptor 2 :D"/>
+		<property name="duties">
 			<list>
 				<ref bean="duty02"/>
 				<ref bean="duty03"/>
 			</list>
 		</property>
-	</bean> 
-	
+	</bean>
+  
+  <bean id="descriptor03" class="acme.entities.descriptors.Descriptor">
+		<property name="description" value="Description3"/>
+		<property name="duties" ref="duty04"/>
+	</bean>
+  
 	<!-- Messages -->
 	
 	<bean id="message01" class="acme.entities.messages.Message">
@@ -533,5 +550,6 @@
 			</list>
 		</property>
 	</bean>
+
 </beans>
 
