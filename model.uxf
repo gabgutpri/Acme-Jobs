@@ -549,9 +549,8 @@ Employer
 + title: String{NotBlank}
 + deadline: Date{NotNull, Temporal(TIMESTAMP)}
 + salary: Money{NotNull, Valid}
-+ description: String{URL}
 + moreInfo: String{URL}
-+ finalMode: boolean</panel_attributes>
++ status: StatusJob{NotNull}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -635,11 +634,11 @@ Made to ^</panel_attributes>
       <h>81</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
-StatusApplication
+
+StatusJob
 --
-+ PENDING
-+ ACCEPTED
-+ REJECTED
++ PUBLISHED
++ DRAFT
 
 bg=orange</panel_attributes>
     <additional_attributes/>
@@ -655,7 +654,8 @@ bg=orange</panel_attributes>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
-Realize v</panel_attributes>
+
+Realize ^</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
@@ -702,17 +702,34 @@ contains v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>144</x>
-      <y>522</y>
+      <x>126</x>
+      <y>459</y>
       <w>171</w>
       <h>81</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
+
 StatusAuditRecord
 --
 + DRAFT
 + PUBLISHED
-
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+<element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>459</y>
+      <w>171</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+Status
+--
++ PENDING
++ ACCEPTED
++ REJECTED
 bg=orange</panel_attributes>
     <additional_attributes/>
   </element>

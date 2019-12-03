@@ -13,10 +13,14 @@
 package acme.entities.duties;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Range;
 
+import acme.entities.descriptors.Descriptor;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -45,5 +49,9 @@ public class Duty extends DomainEntity {
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Descriptor			descriptor;
 
 }

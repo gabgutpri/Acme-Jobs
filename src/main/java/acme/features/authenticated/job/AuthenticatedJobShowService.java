@@ -1,5 +1,5 @@
 
-package acme.features.employer.job;
+package acme.features.authenticated.job;
 
 import java.util.Collection;
 
@@ -9,39 +9,30 @@ import org.springframework.stereotype.Service;
 import acme.entities.descriptors.Descriptor;
 import acme.entities.duties.Duty;
 import acme.entities.jobs.Job;
-import acme.entities.jobs.Status;
-import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
+import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class EmployerJobShowService implements AbstractShowService<Employer, Job> {
+public class AuthenticatedJobShowService implements AbstractShowService<Authenticated, Job> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	EmployerJobRepository repository;
+	AuthenticatedJobRepository repository;
 
 
 	@Override
 	public boolean authorise(final Request<Job> request) {
 		assert request != null;
 
-		boolean result;
 		int jobId;
 
-		Employer employer;
-		Principal principal;
-
 		Job job;
-
 		jobId = request.getModel().getInteger("id");
 		job = this.repository.findOneJobById(jobId);
-		employer = job.getEmployer();
-		principal = request.getPrincipal();
-		result = job.getStatus().equals(Status.PUBLISHED) || !job.getStatus().equals(Status.PUBLISHED) && employer.getUserAccount().getId() == principal.getAccountId();
-		return result;
+
+		return job.isActive();
 	}
 
 	@Override

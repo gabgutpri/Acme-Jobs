@@ -38,6 +38,7 @@
 			<acme:menu-suboption code="master.menu.authenticated.investor-record.list" action="/authenticated/investor-record/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.offer.list" action="/authenticated/offer/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.request.list" action="/authenticated/request/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.job.list" action="/authenticated/job/list-active"/>
 		</acme:menu-option>
 	
 		<%-- COSAS DE ADMIN --%>
@@ -85,7 +86,6 @@
 	  <%-- COSAS DE EMPLOYER --%>
 
 		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">
-			<acme:menu-suboption code="master.menu.employer.duty.list" action="/employer/duty/list"/>
 			<acme:menu-suboption code="master.menu.employer.job.list" action="/employer/job/list-mine"/>
 			<acme:menu-suboption code="master.menu.employer.application.list" action="/employer/application/list-mine"/>
 		</acme:menu-option>

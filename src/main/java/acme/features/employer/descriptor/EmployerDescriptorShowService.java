@@ -32,6 +32,7 @@ public class EmployerDescriptorShowService implements AbstractShowService<Employ
 		assert model != null;
 
 		request.unbind(entity, model, "description");
+
 	}
 
 	@Override
