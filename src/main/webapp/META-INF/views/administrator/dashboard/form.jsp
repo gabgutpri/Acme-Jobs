@@ -30,6 +30,10 @@
 	<acme:form-double code="administrator.dashboard.form.label.avgRewardsOffer" path="avgRewardsOffer"/>
 	<acme:form-double code="administrator.dashboard.form.label.stdRewardsOffer" path="stdRewardsOffer"/>
 	
+	<acme:form-double code="administrator.dashboard.form.label.avgJobsEmployer" path="avgJobsEmployer"/>
+	<acme:form-double code="administrator.dashboard.form.label.avgApplicationsEmployer" path="avgApplicationsEmployer"/>
+	<acme:form-double code="administrator.dashboard.form.label.avgApplicationsWorker" path="avgApplicationsWorker"/>
+	
 	<h2>
 		<acme:message code="administrator.dashboard.form.label.chart.company" />
 	</h2>
@@ -60,6 +64,13 @@
 			var options = {
 					legend : {
 						display : false
+					},
+					scales : {
+						yAxes:[{
+							ticks:{
+								suggestedMin:0.0
+							}
+						}]
 					}
 			};
 			var canvas, context;
@@ -117,6 +128,111 @@
 			});
 		});
 	</script>
+	
+	<h2>
+		<acme:message code="administrator.dashboard.form.label.chart.jobsByStatus" />
+	</h2>
+	
+	<div>
+		<canvas id="canvas3"></canvas>
+	</div>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var data = {
+					labels : [
+						
+						<jstl:forEach var="item" items="${ratioJobsByStatus}">
+							"<jstl:out value="${item[1]}"/>",
+						</jstl:forEach>
+					],
+					datasets : [
+						{
+							data : [
+							<jstl:forEach var="item" items="${ratioJobsByStatus}">
+								"<jstl:out value="${item[0]}"/>",
+							</jstl:forEach>
+							]
+						}						
+					]
+			};
+			var options = {
+					legend : {
+						display : false
+					},
+					scales : {
+						yAxes:[{
+							ticks:{
+								suggestedMin:0.0,
+								suggestedMax:100.0
+							}
+						}]
+					}
+			};
+			var canvas, context;
+			
+			canvas = document.getElementById("canvas3");
+			context = canvas.getContext("2d");
+			new Chart(context, {
+				type : "bar",
+				data : data,
+				options : options
+			});
+		});
+	</script>
+	
+	<h2>
+		<acme:message code="administrator.dashboard.form.label.chart.applicationsByStatus" />
+	</h2>
+	
+	<div>
+		<canvas id="canvas4"></canvas>
+	</div>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var data = {
+					labels : [
+						
+						<jstl:forEach var="item" items="${ratioApplicationsByStatus}">
+							"<jstl:out value="${item[1]}"/>",
+						</jstl:forEach>
+					],
+					datasets : [
+						{
+							data : [
+							<jstl:forEach var="item" items="${ratioApplicationsByStatus}">
+								"<jstl:out value="${item[0]}"/>",
+							</jstl:forEach>
+							]
+						}						
+					]
+			};
+			var options = {
+					legend : {
+						display : false
+					},
+					scales : {
+						yAxes:[{
+							ticks:{
+								suggestedMin:0.0,
+								suggestedMax:100.0
+							}
+						}]
+					}
+			};
+			var canvas, context;
+			
+			canvas = document.getElementById("canvas4");
+			context = canvas.getContext("2d");
+			new Chart(context, {
+				type : "bar",
+				data : data,
+				options : options
+			});
+		});
+	</script>
+	
 	
 	<acme:form-return code="administrator.dashboard.form.button.return"/>
 </acme:form>

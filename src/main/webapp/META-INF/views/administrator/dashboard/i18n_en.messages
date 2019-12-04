@@ -25,7 +25,14 @@ administrator.dashboard.form.label.maxRewardsOffer = Max reward of Offer
 administrator.dashboard.form.label.avgRewardsOffer = Average reward of Offer
 administrator.dashboard.form.label.stdRewardsOffer = Standart deviation reward of Offer
 
+administrator.dashboard.form.label.avgJobsEmployer = Average number of jobs per employer
+administrator.dashboard.form.label.avgApplicationsEmployer = Average number of applications per employer
+administrator.dashboard.form.label.avgApplicationsWorker = Average number of applications per worker
+
 administrator.dashboard.form.label.chart.company = Company Status
 administrator.dashboard.form.label.chart.investor = Investor Status
+
+administrator.dashboard.form.label.chart.jobsByStatus = Ratio of jobs grouped by status
+administrator.dashboard.form.label.chart.applicationsByStatus = Ratio of applications grouped by status
 
 administrator.dashboard.form.button.return = Return

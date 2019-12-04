@@ -29,8 +29,15 @@ public class Dashboard implements Serializable {
 	Double						avgRewardsOffer;
 	Double						stdRewardsOffer;
 
+	Double						avgJobsEmployer;
+	Double						avgApplicationsEmployer;
+	Double						avgApplicationsWorker;
+
 	Collection<Object[]>		sectorNumberCompanyRecord;
 	Collection<Object[]>		sectorNumberInvestorRecord;
+
+	Collection<Object[]>		ratioJobsByStatus;
+	Collection<Object[]>		ratioApplicationsByStatus;
 
 	//Derived atributes
 

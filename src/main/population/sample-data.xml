@@ -196,21 +196,37 @@
 		<bean id="commercialBanner01" class="acme.entities.banners.CommercialBanner">
 				<property name="picture" value="picture1"/>
 				<property name="slogan" value="Pipo's Legend"/>
-				<property name="creditCard" value="4339001299666117"/>
-				<property name="targetUrl" value="http://papaoso.com"/>	
+				<property name="targetUrl" value="http://papaoso.com"/>
+				<property name="sponsor">
+					<ref bean="sponsorSponsor01"/>
+				</property>
+				<property name="creditCard">
+					<ref bean="creditCard01"/>
+				</property>
 		</bean> 
 	
 		<bean id="commercialBanner02" class="acme.entities.banners.CommercialBanner">
 				<property name="picture" value="picture2"/>
 				<property name="slogan" value="No gods or kings, only man"/>
-				<property name="creditCard" value="4872198264579524"/>
-				<property name="targetUrl" value="http://rapture.com"/>	
-		</bean> 	
+				<property name="targetUrl" value="http://rapture.com"/>
+				<property name="sponsor">
+					<ref bean="sponsorSponsor01"/>
+				</property>
+				<property name="creditCard">
+					<ref bean="creditCard01"/>
+				</property>
+		</bean>
+		
 		<bean id="commercialBanner03" class="acme.entities.banners.CommercialBanner">
 				<property name="picture" value="picture3"/>
 				<property name="slogan" value="Vivimos en una sandwichera"/>
-				<property name="creditCard" value="4462221699124900"/>
-				<property name="targetUrl" value="http://elbromas.com"/>	
+				<property name="targetUrl" value="http://elbromas.com"/>
+				<property name="sponsor">
+					<ref bean="sponsorSponsor01"/>
+				</property>
+				<property name="creditCard">
+					<ref bean="creditCard01"/>
+				</property>
 		</bean> 
 		
 		<!-- NON COMMERCIAL BANNERS -->
@@ -218,13 +234,19 @@
 				<property name="picture" value="picture1"/>
 				<property name="slogan" value="Como dijo Socrates: No es momento para provervios"/>
 				<property name="jingle" value="Boom"/>
-				<property name="targetUrl" value="http://chemitasmatesways.com"/>	
+				<property name="targetUrl" value="http://chemitasmatesways.com"/>
+				<property name="sponsor">
+					<ref bean="sponsorSponsor02"/>
+				</property>
 		</bean> 
 		<bean id="nonCommercialBanner02" class="acme.entities.banners.NonCommercialBanner">
 				<property name="picture" value="picture2"/>
 				<property name="slogan" value="¡¡Que no lo he enchufado!!"/>
 				<property name="jingle" value="FIUUN"/>
-				<property name="targetUrl" value="http://airplaneES.com"/>	
+				<property name="targetUrl" value="http://airplaneES.com"/>
+				<property name="sponsor">
+					<ref bean="sponsorSponsor02"/>
+				</property>
 		</bean>
 		
   	<!-- Worker -->
@@ -599,6 +621,76 @@
 			</list>
 		</property>
 	</bean>
+	
+	<!-- Sponsor -->
+	
+  	<bean name="sponsorUserAccount01" class="acme.framework.entities.UserAccount">
+	  	<property name="username" value="sponsor1" />
+	  	<property name="password" value="sponsor1" />
+	  	<property name="enabled" value="true" />
+  		<property name="identity">
+		  	<bean class="acme.datatypes.UserIdentity">
+		  		<property name="name" value="Sponsor1" />
+		  		<property name="surname" value="Rich" />
+		  		<property name="email" value="sponsor1@acme.com" />
+		  	</bean>
+	  	</property>
+	  	<property name="roles">
+		  	<list>
+		  		<ref bean="sponsorSponsor01" />
+		  		<ref bean="sponsorAuthenticated01" />
+		  	</list>
+		  </property>
+	  </bean>
 
+	  <bean name="sponsorSponsor01" class="acme.entities.roles.Sponsor">
+  		<property name="userAccount" ref="sponsorUserAccount01" />
+		<property name="organization" value="Acmesponsor"/>
+	  </bean>
+	  
+  	<bean name="sponsorAuthenticated01" class="acme.framework.entities.Authenticated">
+	  	<property name="userAccount" ref="sponsorUserAccount01" />
+  	</bean>
+  	
+  	<bean name="sponsorUserAccount02" class="acme.framework.entities.UserAccount">
+	  	<property name="username" value="sponsor2" />
+	  	<property name="password" value="sponsor2" />
+	  	<property name="enabled" value="true" />
+  		<property name="identity">
+		  	<bean class="acme.datatypes.UserIdentity">
+		  		<property name="name" value="Sponsor2" />
+		  		<property name="surname" value="Not Rich" />
+		  		<property name="email" value="sponsor2@acme.com" />
+		  	</bean>
+	  	</property>
+	  	<property name="roles">
+		  	<list>
+		  		<ref bean="sponsorSponsor02" />
+		  		<ref bean="sponsorAuthenticated02" />
+		  	</list>
+		  </property>
+	  </bean>
+
+	  <bean name="sponsorSponsor02" class="acme.entities.roles.Sponsor">
+  		<property name="userAccount" ref="sponsorUserAccount02" />
+		<property name="organization" value="Acmesponsor"/>
+	  </bean>
+	  
+  	<bean name="sponsorAuthenticated02" class="acme.framework.entities.Authenticated">
+	  	<property name="userAccount" ref="sponsorUserAccount02" />
+  	</bean>
+  	
+  	<!-- CreditCard -->
+	
+	 <bean name="creditCard01" class="acme.entities.creditCards.CreditCard">
+  		<property name="sponsor" ref="sponsorSponsor01" />
+		<property name="holderName" value="Rosnops"/>
+		<property name="brandName" value="VISA"/>
+		<property name="number" value="4339001299666117"/>
+		<property name="exMonth" value="01"/>
+		<property name="exYear" value="25"/>
+		<property name="cvv" value="001"/>
+	  </bean>
+		
 </beans>
 

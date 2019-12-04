@@ -25,7 +25,14 @@ administrator.dashboard.form.label.maxRewardsOffer = Recompensa maxima de las of
 administrator.dashboard.form.label.avgRewardsOffer = Recompensa media de las ofertas
 administrator.dashboard.form.label.stdRewardsOffer = Desviacion estandar de recompensas de las ofertas
 
+administrator.dashboard.form.label.avgJobsEmployer = Media de trabajos por empleador
+administrator.dashboard.form.label.avgApplicationsEmployer = Media de solicitudes por empleador
+administrator.dashboard.form.label.avgApplicationsWorker = Media de solicitudes por trabajador
+
 administrator.dashboard.form.label.chart.company = Estado de los registros de las compañias
 administrator.dashboard.form.label.chart.investor = Estado de los registros de los inversores
+
+administrator.dashboard.form.label.chart.jobsByStatus = Ratio de trabajos por estado
+administrator.dashboard.form.label.chart.applicationsByStatus = Ratio de solicitudes por estado
 
 administrator.dashboard.form.button.return = Volver

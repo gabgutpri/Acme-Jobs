@@ -100,8 +100,15 @@
 			<acme:menu-suboption code="master.menu.auditor.job.list" action="/auditor/job/list-written"/>
 			<acme:menu-suboption code="master.menu.auditor.job.list-not-written" action="/auditor/job/list-not-written"/>
 		</acme:menu-option>
-	</acme:menu-left>
+	
+		<%-- COSAS DE SPONSOR --%>
 		
+		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')">
+			<acme:menu-suboption code="master.menu.sponsor.banner.list" action="/sponsor/banner/list-mine"/>
+		</acme:menu-option>
+		
+	
+	</acme:menu-left>	
 	
 		<%-- AQUI COMIENZA LA PARTE DERECHA DEL MENU (DONDE ESTA EL LOGIN Y DEMAS) --%>
 		

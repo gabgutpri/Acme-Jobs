@@ -96,6 +96,11 @@ master.menu.auditor = Auditor
 master.menu.auditor.job.list = List of job that have an auditRecord
 master.menu.auditor.job.list-not-written = List of job that don´t have an auditRecord
 
+# master.menu.sponsor ########################################################
+
+master.menu.sponsor = Sponsor
+master.menu.sponsor.banner.list = My banners
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
