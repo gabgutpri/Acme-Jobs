@@ -10,16 +10,15 @@
 
 # LIST
 
-authenticated.message-thread.list.label.title = Titulo
-authenticated.message-thread.list.label.moment = Momento
-authenticated.message.list.label.tags = Etiquetas
-authenticated.message.list.label.body = Cuerpo
+sponsor.banner.list.label.picture = Imagen
+sponsor.banner.list.label.slogan = Eslogan
+sponsor.banner.list.label.targetUrl = Url
 
 # FORM
 
-authenticated.message-thread.form.label.title = Titulo
-authenticated.message-thread.form.label.moment = Momento
-authenticated.message.form.label.tags = Etiquetas
-authenticated.message.form.label.body = Cuerpo
+sponsor.banner.form.label.picture = Imagen
+sponsor.banner.form.label.slogan = Eslogan
+sponsor.banner.form.label.targetUrl = Url
+sponsor.banner.form.label.jingle = Rima
 
-authenticated.message-thread.form.button.return = Volver
+sponsor.banner.form.button.return = Volver
